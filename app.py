@@ -276,7 +276,7 @@ with gr.Blocks(title="Rice Grain Analyzer") as demo:
             
         with gr.Column():
             output_image = gr.Image(label="Annotated Result")
-            output_stats = gr.Label(label="Grain Counts")
+            output_stats = gr.JSON(label="Grain Counts")
             
     btn.click(fn=analyze_rice, inputs=[input_image, conf_slider, slice_slider], outputs=[output_image, output_stats])
 
